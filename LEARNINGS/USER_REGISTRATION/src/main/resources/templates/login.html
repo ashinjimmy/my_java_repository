@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<title>Login Page</title>
+</head>
+
+<body>
+
+
+	<!-- Create a navigation bar (header) -->
+
+	<nav class="navbar navbar-light bg-dark">
+		<div class="container-fluid">
+			<span class="navbar-brand" style="color: white">User Login
+				Page</span>
+		</div>
+	</nav>
+
+
+	<!-- create login form -->
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 ">
+				<br>
+				<div class="card" style="width: 22rem">
+
+					<div class="card-body">
+						<h2 align="center">App Login</h2>
+						<br>
+						<div align="center">
+							&nbsp;<i class="fa fa-user-circle-o"
+								style="font-size: 68px; color: dark"></i>
+						</div>
+						<form th:action="@{/login}" method="post">
+
+							<!-- error message -->
+
+							<div th:if="${param.error}">
+								<div class="alert alert-danger">Invalid user or password
+									!!</div>
+							</div>
+
+							<!-- logout message -->
+
+							<div th:if="${param.logout}">
+								<div class="alert alert-info">You have been logout
+									successfully!</div>
+							</div>
+							<br>
+							<div class="form-group col-md-12">
+								&nbsp;<label for="userName"> User name </label> <input
+									type="text" class="form-control" id="userName" name="userName"
+									placeholder="Email Id" autofocus="autofocus" />
+							</div>
+							<br>
+							<div class="form-group col-md-12">
+								&nbsp;<label for="password">Password</label> <input
+									type="password" class="form-control" id="password"
+									name="password" placeholder="Password" autofocus="autofocus" />
+							</div>
+							<br>
+							<div class="form-group col-md-12">
+							
+							<input type="submit" name="login-submit" id="login_submit"
+							class="form-control btn btn-dark btn-sm" value="Login Submit" />
+								
+								&nbsp;&nbsp;&nbsp;&nbsp;<span> New user?  <a href="/" th:href="@{/signUp}">create account</a></span>
+							</div>
+
+						</form>
+
+						
+					</div>
+
+				</div>
+
+			</div>
+			<div class=" col-md-4">
+
+				<br> <br> <i class="fa fa-linux"
+					style="font-size: 350px; color: dark;"></i>
+				<h5 class="card-title">User Login Page</h5>
+				<p class="card-text">Enter the valid credentials to login the
+					application.</p>
+
+
+
+			</div>
+		</div>
+	</div>
+
+
+
+</body>
+</html>

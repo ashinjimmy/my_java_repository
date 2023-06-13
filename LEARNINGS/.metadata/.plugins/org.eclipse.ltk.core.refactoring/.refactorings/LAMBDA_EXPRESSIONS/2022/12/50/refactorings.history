@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.java.lambda.examples.Addable&apos; to &apos;LambdaExpressionExample2&apos;&#x0D;&#x0A;- Original project: &apos;LAMBDA_EXPRESSIONS&apos;&#x0D;&#x0A;- Original element: &apos;com.java.lambda.examples.Addable&apos;&#x0D;&#x0A;- Renamed element: &apos;com.java.lambda.examples.LambdaExpressionExample2&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Addable&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.java.lambda.examples{Addable.java[Addable" matchStrategy="1" name="LambdaExpressionExample2" qualified="false" references="true" similarDeclarations="false" stamp="1670224718313" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,27 @@
+My Calculator Application 
+===========================
+
+-> Mainly used to calculate the final result of an arithmetic expression.
+-> Used concepts -- OOPs(Inheritance), Collection(Queue, LinkedList), Interface & multiple classes.
+
+ App flow 
+ =========
+ -> Initially the user need to enter an expression which contains arithmetic operators.
+ -> This input is read by ReadExpression class using Scanner class and saved as a String variable.
+ -> These inputs are filtered into operators and numbers in the MainApp class. 
+    -> The string variable is converted into operator array & number array by split method. 
+    -> These arrays are converted into LinkedList with Arrays.asList().
+    -> Finally LinkedList variables are stored as a type of Queue.
+    -> Using poll() we are fetching the first element of the queue and saved into a string variable.
+    -> The string variable need to parse into Double for right calculation.
+    -> We use do while loop as a outer loop to keep the flow of app without any break.
+    -> We use while loop to iterate the calculation of expression.
+    -> Inside while loop, we make use of Switch statement to categorize arithmetic operators.
+    -> Based on the operator selection objects of respective operator class is created and using 
+    dynamic binding we are storing the global object reference as a type of the interface.
+    -> Interface method is implemented in all the operator class and overridden the functionality.
+    -> Interface method is using "VARIABLE ARGUMENTS or VARRAGS" as method argument so that, the 
+    method call can have required number of arguments without any restrictions.
+    
+    Note: In case of Varrags -- In the method definition those arguments are converted into 
+    array of values. 

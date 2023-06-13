@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Employee Registration</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+	<div class="container">
+		<br>
+		<h1 style="color: white; background-color: grey;" align="center">
+			New Employee Registration</h1>
+
+		
+			<form action="#" th:action="@{/saveEmployeeInfo}"
+				th:object="employeeRegistration" method="POST">
+
+				<input type="text" th:field={firstName} th:placeholder="First Name"
+					class="form-control col-4"></input>
+
+
+			</form>
+		
+
+	</div>
+
+</body>
+</html>

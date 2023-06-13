@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Employee Registration</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+	<div class="container">
+		<br>
+		<h1 style="color: white; background-color: grey;" align="center">
+			New Employee Registration</h1>
+		<!-- 	<form action="#" th:action="@{/saveEmployeeInfo}"
+				th:object="employeeRegistrationKey" method="POST">
+
+				<input type="text" th:field={firstName} placeholder="First Name"
+					class="form-control mb-4 col-4"></input>
+
+
+			</form>  -->
+		<form action="#" th:action="@{/saveEmployeeInfo}"
+			th:object="${employeeRegistrationKey}" method="POST">
+			<fieldset>
+				<div><br>
+					<input type="text" th:field="*{firstName}" placeholder="First Name"
+						class="form-control col-4 mb-4"></input>
+						
+						 <input type="text"
+						th:field="*{lastName}" placeholder="Last Name"
+						class="form-control col-4 mb-4"></input>
+						
+						 <input type="email"
+						th:field="*{emailId}" placeholder="Email Id"
+						class="form-control col-4 mb-4"></input> 
+						
+						<input type="text"
+						th:field="*{departmentName}" placeholder="Department Name"
+						class="form-control col-4 mb-4"></input>
+						
+						 <input type="text"
+						th:field="*{salary}" placeholder="Salary"
+						class="form-control col-4 mb-4"></input>
+						<div class="row">
+						
+						<div class="col-lg-3"></div>
+						<button type="submit" class="btn btn-info col-1">Submit</button>
+</div>
+				</div>
+			</fieldset>
+		</form>
+	</div>
+
+</body>
+</html>

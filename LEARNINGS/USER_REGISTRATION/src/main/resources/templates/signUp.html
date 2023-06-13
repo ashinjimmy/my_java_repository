@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Signu Up Page</title>
+
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+
+	<!-- Create a navigation bar (header) -->
+
+	<nav class="navbar navbar-light bg-dark">
+		<div class="container-fluid">
+			<span class="navbar-brand" style="color:white">User Account Registration</span>
+		</div>
+	</nav>
+
+
+	<!-- Create HTML registration form  -->
+
+	<div class="container">
+		<br>
+		<div class="row">
+			<div class="col-md-5 col-md-offset-3"></div>
+
+			<!-- success acknowledgment message -->
+
+			<div th:if="${param.success}">
+				<div class="alert alert-info">You have successfully registered
+					your account.</div>
+			</div> 
+			
+			<h3>Account Registration</h3>
+			<div class="row ">
+				<div class="col-md-4">
+					<form  th:action="@{/signUp}" method="post"
+						th:object="${userObject}">
+
+						<div class="form-group ">
+							<label class="control-label" for="firstName"> First Name</label><input
+								id="firstName" class="form-control" th:field="*{firstName}"
+								type="text" required autofocus="autofocus"  title="First name should contain only alphabets" /> <label
+								class="control-label" for="lastName"> Last Name</label> <input
+								id="lastName" class="form-control" th:field="*{lastName}"
+								type="text" required autofocus="autofocus"  title="Last name should contain only alphabets"  /> <label
+								class="control-label" for="email"> Email Id</label> <input
+								id="emailId" class="form-control" th:field="*{emailId}"
+								type="email" required autofocus="autofocus" title="Email must have alphanumeric characters"  /> <label
+								class="control-label" for="password"> Password</label> <input
+								id="password" class="form-control" th:field="*{password}"
+								type="password" required autofocus="autofocus" /><br>
+
+							<button type="submit" class="btn btn-md btn-dark">Sign
+								Up</button>
+							&nbsp; <span> Already registered? <a href="/"
+								th:href="@{/login}">Login here</a></span>
+						</div>
+					</form>
+				</div>
+				<div class=" col-md-2"></div>
+				<div class=" col-md-4">
+					<span><i class="fa fa-address-card" style="font-size:200px;color:black"></i>
+					<h6>Create an account by entering your details and be part of the application by login it.</h6></span>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+</html>

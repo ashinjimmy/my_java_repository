@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div class="container"> 
+
+ <h2 style="color: white; background-color: black;" > New Employee Registration</h2>
+
+</div>
+
+</body>
+</html>
